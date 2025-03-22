@@ -1,0 +1,106 @@
+plugins {
+	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	maven { url = "https://api.modrinth.com/maven"}
+	maven { url = 'https://maven.parchmentmc.org' }
+	flatDir {
+		dirs 'lib'
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.layered() {
+		officialMojangMappings()
+		parchment "org.parchmentmc.data:parchment-${rootProject.parchment_version}@zip"
+	}
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation("maven.modrinth:frozenlib:${project.frozenlib_version}")
+
+	include modImplementation ("net.legacy.legacies:armor-nerf-2.2.0")
+	include modImplementation ("net.legacy.legacies:bundles-beyond-1.2+1.21.2")
+	include modImplementation ("net.legacy.legacies:carbasa-1.3-fabric")
+	include modImplementation ("net.legacy.legacies:ConfigurableEverything-1.2.3-mc1.21.4")
+	include modImplementation ("net.legacy.legacies:connected-doors-1.3+1.21.2")
+	include modImplementation ("net.legacy.legacies:deselect-1.1.2-1.21.4")
+	include modImplementation ("net.legacy.legacies:doors-closed-1.0.0+1.19.4")
+	include modImplementation ("net.legacy.legacies:elytra-mod-0.0.5")
+	include modImplementation ("net.legacy.legacies:EnhancedBookWriting-1.1.1+mc1.21")
+	include modImplementation ("net.legacy.legacies:FilledMapCoordinates-0.2.1")
+	include modImplementation ("net.legacy.legacies:HorseBuff-1.21.4-2.2.1")
+	include modImplementation ("net.legacy.legacies:InvMove-0.9.0+1.21.4-Fabric")
+	include modImplementation ("net.legacy.legacies:InvMoveCompats-0.4.0+1.21.4-Fabric")
+	include modImplementation ("net.legacy.legacies:NarrusYeetus-1.2.0")
+	include modImplementation ("net.legacy.legacies:nicerportals-1.6.0+1.21.2")
+	include modImplementation ("net.legacy.legacies:particular-1.1.1+1.21.4")
+	include modImplementation ("net.legacy.legacies:real-arrow-tip-0.1.1+mc1.21.4")
+	include modImplementation ("net.legacy.legacies:shearablevines-1.4.0+1.21.2")
+	include modImplementation ("net.legacy.legacies:shifting-wares-3.1.0+1.21.3")
+	include modImplementation ("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.0.0+1.21.3")
+	include modImplementation ("net.legacy.legacies:stackable-bundles-1.0")
+	include modImplementation ("net.legacy.legacies:Tooltipz-1.2-1.21.2+")
+	include modImplementation ("net.legacy.legacies:WaxedIcons-fabric-1.21-2.0.0")
+	include modImplementation ("net.legacy.legacies:world-host-0.5.1+1.21.4-fabric")
+
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
+	// If you remove this line, sources will not be generated.
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.base.archivesName.get()}"}
+	}
+}
+
+// Datagen
+
+fabricApi {
+	configureDataGeneration()
+}
+
+loom {
+	mods {
+		"legacies" {
+			sourceSet sourceSets.main
+		}
+	}
+
+	runs {
+		datagen {
+			inherit client
+		}
+	}
+}

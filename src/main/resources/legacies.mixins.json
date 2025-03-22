@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "net.legacy.legacies.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"RandomUpdateHandlerMixin",
+		"SeasonHooksMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
