@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
+import net.legacy.legacies.integration.BiolithIntegration;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
@@ -22,6 +23,8 @@ public class Legacies implements ModInitializer {
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
+
+		BiolithIntegration.INSTANCE.init();
 	}
 
 	public static ResourceLocation id(String path) {
