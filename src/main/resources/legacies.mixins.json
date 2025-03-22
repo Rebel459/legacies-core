@@ -2,9 +2,7 @@
   "required": true,
   "package": "net.legacy.legacies.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "AridForestMixin"
-  ],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 1
 	}
