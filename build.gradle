@@ -44,22 +44,14 @@ dependencies {
 	include modImplementation ("net.legacy.legacies:elytra-mod-0.0.5")
 	include modImplementation ("net.legacy.legacies:EnhancedBookWriting-1.1.1+mc1.21")
 	include modImplementation ("net.legacy.legacies:FilledMapCoordinates-0.2.1")
-	include modImplementation ("net.legacy.legacies:HorseBuff-1.21.4-2.2.1")
-	include modImplementation ("net.legacy.legacies:InvMove-0.9.0+1.21.4-Fabric")
-	include modImplementation ("net.legacy.legacies:InvMoveCompats-0.4.0+1.21.4-Fabric")
 	include modImplementation ("net.legacy.legacies:NarrusYeetus-1.2.0")
-	include modImplementation ("net.legacy.legacies:nicerportals-1.6.0+1.21.2")
-	include modImplementation ("net.legacy.legacies:particular-1.1.1+1.21.4")
 	include modImplementation ("net.legacy.legacies:player-locator-plus-1.2.0")
 	include modImplementation ("net.legacy.legacies:real-arrow-tip-0.1.1+mc1.21.4")
-	include modImplementation ("net.legacy.legacies:shearablevines-1.4.0+1.21.2")
 	include modImplementation ("net.legacy.legacies:shifting-wares-3.1.0+1.21.3")
 	include modImplementation ("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.0.0+1.21.3")
 	include modImplementation ("net.legacy.legacies:stackable-bundles-1.0")
 	include modImplementation ("net.legacy.legacies:Tooltipz-1.2-1.21.2+")
 	include modImplementation ("net.legacy.legacies:WaxedIcons-fabric-1.21-2.0.0")
-	include modImplementation ("net.legacy.legacies:world-host-0.5.1+1.21.4-fabric")
-
 }
 
 processResources {
