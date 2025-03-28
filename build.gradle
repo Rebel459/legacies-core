@@ -51,7 +51,9 @@ dependencies {
 	include modImplementation ("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.0.0+1.21.3")
 	include modImplementation ("net.legacy.legacies:stackable-bundles-1.0")
 	include modImplementation ("net.legacy.legacies:Tooltipz-1.2-1.21.2+")
+	include modImplementation ("net.legacy.legacies:TrailierTales-1.1.1-mc1.21.4")
 	include modImplementation ("net.legacy.legacies:WaxedIcons-fabric-1.21-2.0.0")
+	include modImplementation ("net.legacy.legacies:WilderWild-4.0.1-mc1.21.4")
 }
 
 processResources {
