@@ -30,9 +30,9 @@ dependencies {
 
 	modImplementation("maven.modrinth:frozenlib:${project.frozenlib_version}")
 
-	modImplementation("maven.modrinth:wilder-wild:${project.wilder_version}")
+	modImplementation("maven.modrinth:morefoodmod:${project.morefood_version}")
 
-	modImplementation("maven.modrinth:biolith:${project.biolith_version}")
+	modImplementation("maven.modrinth:cloth-config:$cloth_config_version")
 
 	include modImplementation ("net.legacy.legacies:armor-nerf-2.2.0")
 	include modImplementation ("net.legacy.legacies:bundles-beyond-1.2+1.21.2")
@@ -47,7 +47,7 @@ dependencies {
 	include modImplementation ("net.legacy.legacies:NarrusYeetus-1.2.0")
 	include modImplementation ("net.legacy.legacies:player-locator-plus-1.2.0")
 	include modImplementation ("net.legacy.legacies:real-arrow-tip-0.1.1+mc1.21.4")
-	include modImplementation ("net.legacy.legacies:shifting-wares-3.1.0+1.21.3")
+	include modImplementation ("net.legacy.legacies:shifting-wares-3.1.1+1.21.3")
 	include modImplementation ("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.0.0+1.21.3")
 	include modImplementation ("net.legacy.legacies:stackable-bundles-1.0")
 	include modImplementation ("net.legacy.legacies:Tooltipz-1.2-1.21.2+")
