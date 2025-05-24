@@ -5,7 +5,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 
-public class FracturedCreativeInventorySorting {
+public class LegaciesCreativeInventorySorting {
 
     public static void init() {
         addBeforeInIngredients(Items.FLINT, LegaciesItems.FLINT_SHARD);
