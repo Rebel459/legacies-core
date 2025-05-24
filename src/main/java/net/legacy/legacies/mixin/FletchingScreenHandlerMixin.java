@@ -39,7 +39,7 @@ public class FletchingScreenHandlerMixin {
 
     static {
         hilts = Set.of(Items.STICK, Items.BLAZE_ROD, Items.BREEZE_ROD);
-        tips = Set.of(LegaciesItems.FLINT_SHARD, Items.IRON_INGOT, Items.GOLD_INGOT, Items.GLOWSTONE_DUST, Items.ECHO_SHARD, Items.ENDER_PEARL, Items.SLIME_BALL);
+        tips = Set.of(LegaciesItems.FLINT_SHARD, Items.IRON_NUGGET, Items.GOLD_NUGGET, Items.GLOWSTONE_DUST, Items.ECHO_SHARD, Items.ENDER_PEARL, Items.SLIME_BALL);
         forgingSlotsManager = null;
     }
 
