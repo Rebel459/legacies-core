@@ -4,6 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.starshooterstudios.fletcher.fletcher.ArrowItems;
 import com.starshooterstudios.fletcher.fletcher.Fletcher;
 import com.starshooterstudios.fletcher.fletcher.screen.FletchingScreenHandler;
+import net.legacy.legacies.registry.LegaciesItems;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.DataSlot;
@@ -38,7 +39,7 @@ public class FletchingScreenHandlerMixin {
 
     static {
         hilts = Set.of(Items.STICK, Items.BLAZE_ROD, Items.BREEZE_ROD);
-        tips = Set.of(Items.FLINT, Items.IRON_INGOT, Items.GOLD_INGOT, Items.GLOWSTONE_DUST, Items.ECHO_SHARD, Items.ENDER_PEARL, Items.SLIME_BALL);
+        tips = Set.of(LegaciesItems.FLINT_SHARD, Items.IRON_INGOT, Items.GOLD_INGOT, Items.GLOWSTONE_DUST, Items.ECHO_SHARD, Items.ENDER_PEARL, Items.SLIME_BALL);
         forgingSlotsManager = null;
     }
 

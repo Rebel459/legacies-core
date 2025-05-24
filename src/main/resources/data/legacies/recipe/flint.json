@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "legacies:flint_shard",
+    "legacies:flint_shard",
+    "legacies:flint_shard",
+    "legacies:flint_shard",
+    "legacies:flint_shard",
+    "legacies:flint_shard",
+    "legacies:flint_shard",
+    "legacies:flint_shard",
+    "legacies:flint_shard"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:flint"
+  }
+}

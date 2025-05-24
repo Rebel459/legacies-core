@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.legacy.legacies.integration.MoreFoodLootTables;
+import net.legacy.legacies.registry.LegaciesItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
@@ -16,6 +17,8 @@ public class Legacies implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("legacies");
+
+		LegaciesItems.init();
 
 		MoreFoodLootTables.modifyLootTables();
 
