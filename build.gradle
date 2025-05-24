@@ -53,6 +53,7 @@ dependencies {
 
 	modImplementation("maven.modrinth:morefoodmod:${project.morefood_version}")
 	modImplementation("maven.modrinth:wilder-wild:${project.wilderwild_version}")
+	modImplementation("maven.modrinth:fletcher-fabric:${project.fletcher_version}")
 }
 
 processResources {
