@@ -23,7 +23,7 @@
 		"legacies.mixins.json"
 	],
 	"depends": {
-		"minecraft": "1.21.4",
+		"minecraft": "1.21.5",
 		"fabric-api": "*"
 	}
 }

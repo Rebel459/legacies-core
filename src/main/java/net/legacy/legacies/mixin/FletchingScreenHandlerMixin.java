@@ -1,28 +1,17 @@
 package net.legacy.legacies.mixin;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.starshooterstudios.fletcher.fletcher.ArrowItems;
-import com.starshooterstudios.fletcher.fletcher.Fletcher;
 import com.starshooterstudios.fletcher.fletcher.screen.FletchingScreenHandler;
 import net.legacy.legacies.registry.LegaciesItems;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.inventory.DataSlot;
 import net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionContents;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.Map;
 import java.util.Set;
 
 @Mixin(value = FletchingScreenHandler.class)

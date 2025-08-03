@@ -14,5 +14,4 @@ public class LegaciesCreativeInventorySorting {
     private static void addBeforeInIngredients(ItemLike comparedItem, ItemLike item) {
         FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.INGREDIENTS);
     }
-
 }

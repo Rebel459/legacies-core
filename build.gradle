@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'fabric-loom' version '1.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -12,7 +12,7 @@ base {
 
 repositories {
 	maven { url = "https://api.modrinth.com/maven"}
-	maven { url = 'https://maven.parchmentmc.org' }
+	maven { url = "https://maven.shedaniel.me/" }
 	flatDir {
 		dirs 'lib'
 	}
@@ -22,7 +22,6 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.layered() {
 		officialMojangMappings()
-		parchment "org.parchmentmc.data:parchment-${rootProject.parchment_version}@zip"
 	}
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
@@ -30,31 +29,23 @@ dependencies {
 
 	modImplementation("maven.modrinth:frozenlib:${project.frozenlib_version}")
 
-	modImplementation("maven.modrinth:cloth-config:$cloth_config_version")
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 
-	include modImplementation ("net.legacy.legacies:armor-nerf-2.2.0")
-	include modImplementation ("net.legacy.legacies:bundles-beyond-1.2.1+1.21.3")
+	include modImplementation ("net.legacy.legacies:armor-nerf-2.2.1")
+	include modImplementation ("net.legacy.legacies:armor-stand-arms-v.2.5.1")
 	include modImplementation ("net.legacy.legacies:carbasa-1.4-multi")
-	include modImplementation ("net.legacy.legacies:ConfigurableEverything-1.2.4-mc1.21.4")
-	include modImplementation ("net.legacy.legacies:connected-doors-1.3+1.21.2")
-	include modImplementation ("net.legacy.legacies:ConsumableOptimizer-1.21.4")
+	include modImplementation ("net.legacy.legacies:ConfigurableEverything-1.2.5-mc1.21.5")
 	include modImplementation ("net.legacy.legacies:doors-closed-1.0.0+1.19.4")
-	include modImplementation ("net.legacy.legacies:elytra-mod-0.1.1+1.21.4")
-	include modImplementation ("net.legacy.legacies:EnhancedBookWriting-1.1.1+mc1.21")
-	include modImplementation ("net.legacy.legacies:FilledMapCoordinates-0.2.1")
-	include modImplementation ("net.legacy.legacies:MapDistanceFix-1.0.2+mc1.21-1.21.6")
-	include modImplementation ("net.legacy.legacies:NarrusYeetus-1.4.0")
-	include modImplementation ("net.legacy.legacies:noinputlagtickrate-1.0.1")
-	include modImplementation ("net.legacy.legacies:ParticleTweaks-fabric-2.1.1-modified")
+	include modImplementation ("net.legacy.legacies:elytra-mod-0.1.1+1.21.5")
+	include modImplementation ("net.legacy.legacies:harderbeds-1.0.1-mc1.21.5")
+	include modImplementation ("net.legacy.legacies:horses-can-float-1.21")
 	include modImplementation ("net.legacy.legacies:player-locator-plus-2.1.3")
-	include modImplementation ("net.legacy.legacies:shifting-wares-3.1.1+1.21.3")
-	include modImplementation ("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.1.0+1.21.4")
-	include modImplementation ("net.legacy.legacies:smoothmaps-fabric-1.4")
+	include modImplementation ("net.legacy.legacies:shifting-wares-3.1.1+1.21.5")
+	include modImplementation ("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.1.0+1.21.5")
 	include modImplementation ("net.legacy.legacies:Tooltipz-1.2-1.21.2+")
-	include modImplementation ("net.legacy.legacies:WaxedIcons-fabric-1.21-2.0.0")
 
-	modImplementation("maven.modrinth:morefoodmod:${project.morefood_version}")
-	modImplementation("maven.modrinth:wilder-wild:${project.wilderwild_version}")
 	modImplementation("maven.modrinth:fletcher-fabric:${project.fletcher_version}")
 }
 

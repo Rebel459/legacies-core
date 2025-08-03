@@ -24,5 +24,4 @@ public final class LegaciesItems {
     private static @NotNull <T extends Item> T register(String name, @NotNull Function<Properties, Item> function, @NotNull Properties properties) {
         return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, Legacies.id(name)), function, properties);
     }
-
 }
