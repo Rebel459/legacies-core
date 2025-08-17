@@ -43,7 +43,7 @@ public class HoeItemMixin {
 
         Player player = context.getPlayer();
         if (!context.getItemInHand().is(ItemTags.HOES) || player == null) return;
-        int radius = 1;
+        int radius = 0;
 
         ServerLevel serverLevel = (ServerLevel) level;
         boolean harvested = false;
