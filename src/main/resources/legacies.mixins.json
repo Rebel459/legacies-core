@@ -3,10 +3,13 @@
   "package": "net.legacy.legacies.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "FletchingScreenHandlerMixin",
-    "HoeItemMixin"
+    "integration.fletcher.FletchingScreenHandlerMixin",
+    "item.HoeItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-	}
+  },
+  "client": [
+    "client.TitleScreenMixin"
+  ]
 }

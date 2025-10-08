@@ -1,4 +1,4 @@
-package net.legacy.legacies.mixin;
+package net.legacy.legacies.mixin.item;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

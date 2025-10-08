@@ -78,6 +78,10 @@ jar {
 	}
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/legacies.accesswidener")
+}
+
 // Datagen
 
 fabricApi {

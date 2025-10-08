@@ -19,6 +19,7 @@
           "net.legacy.legacies.Legacies"
 		]
 	},
+	"accessWidener": "legacies.accesswidener",
 	"mixins": [
 		"legacies.mixins.json"
 	],

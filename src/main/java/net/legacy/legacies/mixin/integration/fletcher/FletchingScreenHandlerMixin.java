@@ -1,4 +1,5 @@
-package net.legacy.legacies.mixin;
+package net.legacy.legacies.mixin.integration.fletcher;
+
 
 import com.starshooterstudios.fletcher.fletcher.screen.FletchingScreenHandler;
 import net.legacy.legacies.registry.LegaciesItems;
