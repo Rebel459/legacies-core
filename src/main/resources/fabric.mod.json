@@ -15,10 +15,14 @@
 	"icon": "assets/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-          "net.legacy.legacies.Legacies"
-		]
+      "main": [
+        "net.legacy.legacies.Legacies"
+      ],
+      "client": [
+        "net.legacy.legacies.LegaciesClient"
+      ]
 	},
+    "accessWidener": "legacies.accesswidener",
 	"mixins": [
 		"legacies.mixins.json"
 	],
