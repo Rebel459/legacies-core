@@ -3,7 +3,7 @@ package net.legacy.legacies.mixin.worldgen;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mojang.datafixers.util.Pair;
-import net.legacy.legacies.util.NetherBiomeHelper;
+import net.legacy.legacies.util.NetherHelper;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -38,8 +38,8 @@ public class MultiNoiseBiomeSourceParameterListMixin {
                     @Override
                     public <T> Climate.ParameterList<T> apply(Function<ResourceKey<Biome>, T> function) {
                         final List<Pair<Climate.ParameterPoint, T>> biomes = new ArrayList<>();
-                        for (int i = 0; i < NetherBiomeHelper.NETHER_BIOMES.size(); i++) {
-                            final Pair<Climate.ParameterPoint, ResourceKey<Biome>> pair = NetherBiomeHelper.NETHER_BIOMES.get(i);
+                        for (int i = 0; i < NetherHelper.NETHER_BIOMES.size(); i++) {
+                            final Pair<Climate.ParameterPoint, ResourceKey<Biome>> pair = NetherHelper.NETHER_BIOMES.get(i);
                             biomes.add(Pair.of(pair.getFirst(), function.apply(pair.getSecond())));
                         }
                         return new Climate.ParameterList<>(biomes);
