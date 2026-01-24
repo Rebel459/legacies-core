@@ -14,7 +14,7 @@ public class LegaciesResources {
 
     public static void init() {
 
-        File disabledFile = Minecraft.getInstance().gameDirectory.toPath().resolve("config/fancymenu/assets/info").resolve("downloads_disabled.txt").toFile();
+        File disabledFile = Minecraft.getInstance().gameDirectory.toPath().resolve("config/fancymenu/assets/settings").resolve("downloads_disabled.txt").toFile();
         if (!disabledFile.exists()) {
             FrozenLibModResourcePackApi.downloadResourcePacks(createResources(), false, false);
         }
