@@ -10,7 +10,7 @@ import java.io.File;
 
 @Environment(EnvType.CLIENT)
 public class LegaciesResources {
-    private static final String VERSION_SUFFIX = "_v2";
+    private static final String VERSION_SUFFIX = "_v3";
 
     public static void init() {
 
