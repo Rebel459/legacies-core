@@ -4,8 +4,8 @@ import com.terraformersmc.biolith.api.biome.BiomePlacement;
 import com.terraformersmc.biolith.api.biome.sub.BiomeParameterTargets;
 import com.terraformersmc.biolith.api.biome.sub.Criterion;
 import com.terraformersmc.biolith.api.biome.sub.CriterionBuilder;
-import net.legacy.legacies.Legacies;
 import net.legacy.legacies.util.NetherHelper;
+import net.legacy.legacies.util.RegistryHelper;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
@@ -25,7 +25,7 @@ public class LegaciesBiomePlacement {
     private static void overworld() {
         BiomePlacement.addSubOverworld(
                 Biomes.FOREST,
-                Legacies.getBiome("wilderwild:dying_forest"),
+                RegistryHelper.biome("wilderwild:dying_forest"),
                 CriterionBuilder.allOf(
                         neighboringAny(Biomes.SNOWY_PLAINS, Biomes.SNOWY_TAIGA, Biomes.FROZEN_RIVER),
                         CriterionBuilder.value(BiomeParameterTargets.TEMPERATURE, -0.45F, 0.15F)
