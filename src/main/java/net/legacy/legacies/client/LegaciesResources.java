@@ -3,10 +3,7 @@ package net.legacy.legacies.client;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.frozenblock.lib.resource_pack.api.client.FrozenLibModResourcePackApi;
-import net.minecraft.client.Minecraft;
 import org.jetbrains.annotations.NotNull;
-
-import java.io.File;
 
 @Environment(EnvType.CLIENT)
 public class LegaciesResources {
@@ -14,8 +11,7 @@ public class LegaciesResources {
 
     public static void init() {
 
-        File disabledFile = Minecraft.getInstance().gameDirectory.toPath().resolve("config/fancymenu/assets/settings").resolve("downloads_disabled.txt").toFile();
-        if (!disabledFile.exists()) {
+        if (LegaciesSettings.getBoolean("downloads")) {
             FrozenLibModResourcePackApi.downloadResourcePacks(createResources(), false, false);
         }
     }
