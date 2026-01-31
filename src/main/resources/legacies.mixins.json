@@ -3,7 +3,6 @@
   "package": "net.legacy.legacies.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "entity.CombatRulesMixin",
     "item.FireworkRocketItemMixin",
     "server.ServerAdvancementManagerMixin",
     "worldgen.MultiNoiseBiomeSourceParameterListMixin",
