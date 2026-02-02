@@ -15,7 +15,7 @@ public class FireworkRocketItemMixin {
 	
 	@Inject(method = "use", at = @At("HEAD"), cancellable = true)
 	private void init(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResult> cir) {
-		if(player.isFallFlying()) {
+		if (player.isFallFlying()) {
             cir.setReturnValue(InteractionResult.FAIL);
 		}
 	}
