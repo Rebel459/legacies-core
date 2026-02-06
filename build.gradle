@@ -39,7 +39,7 @@ dependencies {
     include modImplementation ("net.legacy.legacies:elytra-revamped-rerewritten+1.21.11-1.0.1")
     include modImplementation ("net.legacy.legacies:enchanteds_sodium_options-1.1.1+0.8.4-mc1.21.11-fabric")
     include modImplementation ("net.legacy.legacies:harous-leashed-fences-1.0.1+1.21.11")
-    include modImplementation ("net.legacy.legacies:locator_lodestones-1.4.5+1.21.9+B")
+    include modImplementation ("net.legacy.legacies:locator_lodestones-1.5.0+1.21.9+A")
     include modImplementation ("net.legacy.legacies:personalplayer-1.21.11-1.4.5")
     include modImplementation ("net.legacy.legacies:preferred-gamerules-2.0.0+1.21.11")
     include modImplementation ("net.legacy.legacies:simple-registry-aliases-1.0.0+1.21.4")

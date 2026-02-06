@@ -9,8 +9,7 @@ import java.nio.file.Path;
 
 public class LegaciesSettings {
 
-    public static File DIRECTORY = Minecraft.getInstance().gameDirectory;
-    public static Path SETTINGS = DIRECTORY.toPath().resolve("config/fancymenu/assets/settings");
+    public static Path SETTINGS = Minecraft.getInstance().gameDirectory.toPath().resolve("config/fancymenu/assets/settings");
 
     public static void init() throws IOException {
         if (!Files.exists(SETTINGS)) Files.createDirectories(SETTINGS);
