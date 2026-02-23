@@ -20,6 +20,9 @@
       ],
       "client": [
         "net.legacy.legacies.LegaciesClient"
+      ],
+      "preLaunch": [
+        "net.legacy.legacies.LegaciesPreLaunch"
       ]
 	},
     "accessWidener": "legacies.accesswidener",

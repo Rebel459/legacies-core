@@ -1,6 +1,6 @@
 package net.legacy.legacies.client;
 
-import net.minecraft.client.Minecraft;
+import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class LegaciesDefaultOptions {
 
-    public static Path ROOT = Minecraft.getInstance().gameDirectory.toPath();
+    public static Path ROOT = FabricLoader.getInstance().getGameDir();
     public static Path DEFAULTS = ROOT.resolve("config/legacies/defaults");
 
     public static void init() throws IOException {

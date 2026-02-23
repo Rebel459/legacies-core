@@ -11,7 +11,5 @@
   "injectors": {
     "defaultRequire": 1
   },
-  "client": [
-    "client.MinecraftMixin"
-  ]
+  "client": []
 }
