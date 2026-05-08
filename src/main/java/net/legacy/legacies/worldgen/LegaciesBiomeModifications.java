@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.legacy.legacies.Legacies;
 import net.legacy.legacies.util.RegistryHelper;
-import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class LegaciesBiomeModifications {

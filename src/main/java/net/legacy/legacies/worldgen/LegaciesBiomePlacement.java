@@ -1,15 +1,8 @@
 package net.legacy.legacies.worldgen;
 
-import com.terraformersmc.biolith.api.biome.sub.Criterion;
-import com.terraformersmc.biolith.api.biome.sub.CriterionBuilder;
 import net.legacy.legacies.util.NetherHelper;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class LegaciesBiomePlacement {
 
@@ -115,10 +108,4 @@ public class LegaciesBiomePlacement {
 
     private static void end() {}
 
-    @SafeVarargs
-    private static Criterion neighboringAny(ResourceKey<Biome>... biomes) {
-        final List<Criterion> criterions = new ArrayList<>();
-        for (ResourceKey<Biome> biome : biomes) criterions.add(CriterionBuilder.neighbor(biome));
-        return CriterionBuilder.anyOf(criterions);
-    }
 }

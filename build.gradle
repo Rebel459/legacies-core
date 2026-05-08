@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.15-SNAPSHOT'
+	id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -22,39 +22,37 @@ repositories {
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.layered() {
-		officialMojangMappings()
-	}
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    api("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-	modApi("maven.modrinth:frozenlib:$frozenlib_version")
-    modApi("maven.modrinth:biolith:$biolith_version")
-	include(modImplementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")))
+	api("maven.modrinth:frozenlib:$frozenlib_version")
+	include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")))
 
-	modImplementation("maven.modrinth:the-copperier-age:$tca_version")
+	implementation("maven.modrinth:the-copperier-age:$tca_version")
+	include implementation("net.legacy.legacies:enderscape-fabric-2.1.1+mc26.1.2")
 
-	include modImplementation("net.legacy.legacies:armor-stand-overhaul-0.1")
-    include modImplementation("net.legacy.legacies:bundled-1.4.0-1.21.5")
-    include modImplementation("net.legacy.legacies:carbasa-1.5-multi")
-    include modImplementation("net.legacy.legacies:doors-closed-1.0.0+1.19.4")
-    include modImplementation("net.legacy.legacies:elytra-revamped-rerewritten+1.21.11-1.0.1")
-    include modImplementation("net.legacy.legacies:enchanteds_sodium_options-1.1.4+0.8.7-mc1.21.11-fabric")
-    include modImplementation("net.legacy.legacies:fps-sync-1.0.0+1.21.11")
-    include modImplementation("net.legacy.legacies:harous-leashed-fences-1.0.1+1.21.11")
-    include modImplementation("net.legacy.legacies:locator_lodestones-1.5.2+1.21.9+A")
-    include modImplementation("net.legacy.legacies:personalplayer-1.21.11-1.4.5")
-    include modImplementation("net.legacy.legacies:preferred-gamerules-2.0.0+1.21.11")
-    include modImplementation("net.legacy.legacies:shifting-wares-3.2.1+1.21.11")
-    include modImplementation("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.1.0+1.21.5")
-    include modImplementation("net.legacy.legacies:simple-registry-aliases-1.0.0+1.21.4")
-    include modImplementation("net.legacy.legacies:slime-biome-1.1.1")
-    include modImplementation("net.legacy.legacies:supplemental_patches-0.8.0-beta")
-    include modImplementation("net.legacy.legacies:Tooltipz-1.4.1-1.21.9")
-    include modImplementation("net.legacy.legacies:visual-snowy-leaves-0.6.0-beta.7+mc1.21.11")
+/*	include implementation("net.legacy.legacies:armor-stand-overhaul-0.1")
+    include implementation("net.legacy.legacies:bundled-1.4.0-1.21.5")
+    include implementation("net.legacy.legacies:carbasa-1.5-multi")
+    include implementation("net.legacy.legacies:doors-closed-1.0.0+1.19.4")
+    include implementation("net.legacy.legacies:elytra-revamped-rerewritten+1.21.11-1.0.1")
+    include implementation("net.legacy.legacies:enchanteds_sodium_options-1.1.4+0.8.7-mc1.21.11-fabric")
+    include implementation("net.legacy.legacies:fps-sync-1.0.0+1.21.11")
+    include implementation("net.legacy.legacies:harous-leashed-fences-1.0.1+1.21.11")
+    include implementation("net.legacy.legacies:locator_lodestones-1.5.2+1.21.9+A")
+    include implementation("net.legacy.legacies:personalplayer-1.21.11-1.4.5")
+    include implementation("net.legacy.legacies:preferred-gamerules-2.0.0+1.21.11")
+    include implementation("net.legacy.legacies:shifting-wares-3.2.1+1.21.11")
+    include implementation("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.1.0+1.21.5")
+    include implementation("net.legacy.legacies:simple-registry-aliases-1.0.0+1.21.4")
+    include implementation("net.legacy.legacies:slime-biome-1.1.1")
+    include implementation("net.legacy.legacies:supplemental_patches-0.8.0-beta")
+    include implementation("net.legacy.legacies:Tooltipz-1.4.1-1.21.9")
+    include implementation("net.legacy.legacies:visual-snowy-leaves-0.6.0-beta.7+mc1.21.11")*/
 }
 
 processResources {
@@ -66,7 +64,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
+	it.options.release = 25
 }
 
 java {
@@ -75,8 +73,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
 }
 
 jar {
@@ -92,7 +90,7 @@ fabricApi {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/legacies.accesswidener")
+    accessWidenerPath = file("src/main/resources/legacies.classtweaker")
 
 	mods {
 		"legacies" {

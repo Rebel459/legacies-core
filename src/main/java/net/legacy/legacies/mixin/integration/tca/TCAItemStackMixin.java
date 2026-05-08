@@ -5,7 +5,6 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.WeatheringCopper;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -23,9 +22,8 @@ public abstract class TCAItemStackMixin {
     @ModifyExpressionValue(
             method = "@MixinSquared:Handler",
             at = @At(
-                    value = "FIELD",
-                    target = "Lnet/frozenblock/thecopperierage/config/TCAConfig;BETTER_COPPER_TOOLTIPS:Z",
-                    opcode = Opcodes.GETSTATIC
+                    value = "INVOKE",
+                    target = "Ljava/lang/Boolean;booleanValue()Z"
             )
     )
     private boolean disableTCACopperTooltips(boolean original) {

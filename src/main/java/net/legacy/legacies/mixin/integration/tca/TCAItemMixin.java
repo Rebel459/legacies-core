@@ -3,7 +3,6 @@ package net.legacy.legacies.mixin.integration.tca;
 import com.bawnorton.mixinsquared.TargetHandler;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.world.item.Item;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -17,9 +16,8 @@ public abstract class TCAItemMixin {
     @ModifyExpressionValue(
             method = "@MixinSquared:Handler",
             at = @At(
-                    value = "FIELD",
-                    target = "Lnet/frozenblock/thecopperierage/config/TCAConfig;BETTER_COPPER_TOOLTIPS:Z",
-                    opcode = Opcodes.GETSTATIC
+                    value = "INVOKE",
+                    target = "Ljava/lang/Boolean;booleanValue()Z"
             )
     )
     private boolean disableTCACopperTooltips(boolean original) {
