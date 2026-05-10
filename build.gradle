@@ -1,5 +1,5 @@
 plugins {
-	id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
+	id 'net.fabricmc.fabric-loom' version '1.16-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -27,6 +27,7 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.api_version}"
 
 	implementation("maven.modrinth:unified-api:$unified_version-fabric")
+	implementation("maven.modrinth:fancymenu:$fancymenu_version")
 
     api("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
@@ -46,6 +47,7 @@ dependencies {
 	include implementation("net.rebel459.legacies:preferred-gamerules-2.0.0+26.1")
 	include implementation("net.rebel459.legacies:shifting-wares-4.0.0+26.1.2")
 	include implementation("net.rebel459.legacies:simple-registry-aliases-1.1.0+26.1")
+	include implementation("net.rebel459.legacies:slime-time-1.1.5+26.1.2")
     include implementation("net.rebel459.legacies:Tooltipz-1.4.1-1.21.9")
 }
 
