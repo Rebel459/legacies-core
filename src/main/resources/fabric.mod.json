@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
       "main": [
-        "net.legacy.legacies.Legacies"
+		  "net.rebel459.legacies.Legacies"
       ],
       "client": [
-        "net.legacy.legacies.LegaciesClient"
+		  "net.rebel459.legacies.LegaciesClient"
       ],
       "preLaunch": [
-        "net.legacy.legacies.LegaciesPreLaunch"
+		  "net.rebel459.legacies.LegaciesPreLaunch"
       ]
 	},
     "accessWidener": "legacies.classtweaker",

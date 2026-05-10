@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.legacy.legacies.mixin",
+  "package": "net.rebel459.legacies.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
     "integration.tca.TCAItemMixin",

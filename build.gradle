@@ -24,7 +24,9 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
-	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.api_version}"
+
+	implementation("maven.modrinth:unified-api:$unified_version-fabric")
 
     api("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
@@ -33,26 +35,18 @@ dependencies {
 	include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")))
 
 	implementation("maven.modrinth:the-copperier-age:$tca_version")
-	include implementation("net.legacy.legacies:enderscape-fabric-2.1.1+mc26.1.2")
+	include implementation("net.rebel459.legacies:enderscape-fabric-2.1.1+mc26.1.2")
 
-/*	include implementation("net.legacy.legacies:armor-stand-overhaul-0.1")
-    include implementation("net.legacy.legacies:bundled-1.4.0-1.21.5")
-    include implementation("net.legacy.legacies:carbasa-1.5-multi")
-    include implementation("net.legacy.legacies:doors-closed-1.0.0+1.19.4")
-    include implementation("net.legacy.legacies:elytra-revamped-rerewritten+1.21.11-1.0.1")
-    include implementation("net.legacy.legacies:enchanteds_sodium_options-1.1.4+0.8.7-mc1.21.11-fabric")
-    include implementation("net.legacy.legacies:fps-sync-1.0.0+1.21.11")
-    include implementation("net.legacy.legacies:harous-leashed-fences-1.0.1+1.21.11")
-    include implementation("net.legacy.legacies:locator_lodestones-1.5.2+1.21.9+A")
-    include implementation("net.legacy.legacies:personalplayer-1.21.11-1.4.5")
-    include implementation("net.legacy.legacies:preferred-gamerules-2.0.0+1.21.11")
-    include implementation("net.legacy.legacies:shifting-wares-3.2.1+1.21.11")
-    include implementation("net.legacy.legacies:shiftingwares-villagerconfig-addon-2.1.0+1.21.5")
-    include implementation("net.legacy.legacies:simple-registry-aliases-1.0.0+1.21.4")
-    include implementation("net.legacy.legacies:slime-biome-1.1.1")
-    include implementation("net.legacy.legacies:supplemental_patches-0.8.0-beta")
-    include implementation("net.legacy.legacies:Tooltipz-1.4.1-1.21.9")
-    include implementation("net.legacy.legacies:visual-snowy-leaves-0.6.0-beta.7+mc1.21.11")*/
+	include implementation("net.rebel459.legacies:carbasa-1.5-multi")
+	include implementation("net.rebel459.legacies:elytra-revamped-rerewritten+26.1-1.0.2")
+	include implementation("net.rebel459.legacies:enchanteds_sodium_options-1.2.1+0.8.11-mc26.1.2-fabric")
+	include implementation("net.rebel459.legacies:fps-sync-1.0.0+26.1")
+	include implementation("net.rebel459.legacies:harous-leashed-fences-1.1.0+26.1.X")
+	include implementation("net.rebel459.legacies:locator_lodestones-1.5.2+26.1+C")
+	include implementation("net.rebel459.legacies:preferred-gamerules-2.0.0+26.1")
+	include implementation("net.rebel459.legacies:shifting-wares-4.0.0+26.1.2")
+	include implementation("net.rebel459.legacies:simple-registry-aliases-1.1.0+26.1")
+    include implementation("net.rebel459.legacies:Tooltipz-1.4.1-1.21.9")
 }
 
 processResources {
