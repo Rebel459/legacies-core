@@ -47,7 +47,6 @@ dependencies {
 	include implementation("net.rebel459.legacies:preferred-gamerules-2.0.0+26.1")
 	include implementation("net.rebel459.legacies:shifting-wares-4.0.0+26.1.2")
 	include implementation("net.rebel459.legacies:simple-registry-aliases-1.1.0+26.1")
-	include implementation("net.rebel459.legacies:slime-time-1.1.5+26.1.2")
     include implementation("net.rebel459.legacies:Tooltipz-1.4.1-1.21.9")
 }
 
