@@ -22,12 +22,6 @@ public abstract class MinecraftMixin {
 			)
 	)
 	private void fixFancyMenu(Args args) {
-		Minecraft client = Minecraft.class.cast(this);
-
-		if (client.level != null) {
-			return;
-		}
-
 		Window window = this.getWindow();
 
 		int width = window.getGuiScaledWidth();
