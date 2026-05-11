@@ -5,7 +5,9 @@
   "mixins": [
     "integration.tca.TCAItemMixin",
     "integration.tca.TCAItemStackMixin",
+    "integration.ww.WWTundraMixin",
     "item.FireworkRocketItemMixin",
+    "level.GameRulesMixin",
     "server.ServerAdvancementManagerMixin",
     "worldgen.MultiNoiseBiomeSourceParameterListMixin",
     "worldgen.NoiseChunkMixin"
@@ -14,7 +16,9 @@
     "defaultRequire": 1
   },
   "client": [
+    "client.KeyboardHandlerMixin",
     "client.MinecraftMixin",
+    "client.ProfilerPieChartMixin",
     "client.enderscape.ClientPackSourceMixin"
   ]
 }

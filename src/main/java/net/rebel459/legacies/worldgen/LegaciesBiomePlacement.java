@@ -1,8 +1,16 @@
 package net.rebel459.legacies.worldgen;
 
-import net.rebel459.legacies.util.NetherHelper;
+import dev.worldgen.lithostitched.api.event.AddBiomeInjectorsEvent;
+import dev.worldgen.lithostitched.api.worldgen.biomeinjector.BiomeInjector;
+import dev.worldgen.lithostitched.api.worldgen.biomeinjector.ParameterBuilder;
+import net.frozenblock.wilderwild.config.WWWorldgenConfig;
+import net.frozenblock.wilderwild.registry.WWBiomes;
+import net.minecraft.core.HolderSet;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
+import net.rebel459.legacies.Legacies;
+import net.rebel459.legacies.util.NetherHelper;
 
 public class LegaciesBiomePlacement {
 
@@ -12,7 +20,27 @@ public class LegaciesBiomePlacement {
         end();
     }
 
-    private static void overworld() {}
+    private static void overworld() {
+        AddBiomeInjectorsEvent.EVENT.register((registry, consumer) -> {
+            if (WWWorldgenConfig.TUNDRA_GENERATION.get()) {
+                consumer.accept(
+                        Legacies.id("tundra"),
+                        BiomeInjector.builder(Level.OVERWORLD).replacePartially(
+                                HolderSet.direct(
+                                        registry.getOrThrow(Biomes.PLAINS),
+                                        registry.getOrThrow(Biomes.SUNFLOWER_PLAINS)
+                                ),
+                                registry.getOrThrow(WWBiomes.TUNDRA),
+                                ParameterBuilder.create()
+                                        .climateRange(BiomeInjector.ClimateParameter.TEMPERATURE, -0.495F, -0.255F)
+                                        .climateRange(BiomeInjector.ClimateParameter.HUMIDITY, -1.0F, -0.2F)
+                                        .climateRange(BiomeInjector.ClimateParameter.EROSION, -0.2225F, 1F)
+                                        .climateRange(BiomeInjector.ClimateParameter.WEIRDNESS, 0.05F, 1F)
+                        )
+                );
+            }
+        });
+    }
 
     private static void nether() {
         NetherHelper.addBiome(
