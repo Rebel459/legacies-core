@@ -5,7 +5,6 @@
   "mixins": [
     "integration.tca.TCAItemMixin",
     "integration.tca.TCAItemStackMixin",
-    "integration.ww.WWTundraMixin",
     "item.FireworkRocketItemMixin",
     "level.GameRulesMixin",
     "server.ServerAdvancementManagerMixin",
