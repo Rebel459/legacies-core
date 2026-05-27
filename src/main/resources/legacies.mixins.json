@@ -16,7 +16,6 @@
   },
   "client": [
     "client.KeyboardHandlerMixin",
-    "client.MinecraftMixin",
     "client.ProfilerPieChartMixin",
     "client.enderscape.ClientPackSourceMixin"
   ]

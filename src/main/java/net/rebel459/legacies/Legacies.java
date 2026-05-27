@@ -2,7 +2,9 @@ package net.rebel459.legacies;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
+import net.rebel459.legacies.event.LegaciesCreativeInventory;
 import net.rebel459.legacies.event.LegaciesDataComponents;
+import net.rebel459.legacies.event.LegaciesLootTables;
 import net.rebel459.legacies.worldgen.LegaciesBiomeModifications;
 import net.rebel459.legacies.worldgen.LegaciesBiomePlacement;
 
@@ -13,6 +15,8 @@ public class Legacies implements ModInitializer {
         LegaciesBiomePlacement.init();
         LegaciesBiomeModifications.init();
 		LegaciesDataComponents.init();
+		LegaciesLootTables.init();
+		LegaciesCreativeInventory.init();
 	}
 
 	public static Identifier id(String path) {

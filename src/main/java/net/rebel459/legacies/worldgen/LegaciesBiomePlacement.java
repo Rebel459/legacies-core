@@ -1,13 +1,14 @@
 package net.rebel459.legacies.worldgen;
 
-import com.google.common.collect.UnmodifiableIterator;
 import com.mojang.datafixers.util.Pair;
 import dev.worldgen.lithostitched.api.event.AddBiomeInjectorsEvent;
 import dev.worldgen.lithostitched.api.worldgen.biomeinjector.BiomeInjector;
 import dev.worldgen.lithostitched.api.worldgen.biomeinjector.ParameterBuilder;
-import net.frozenblock.lib.worldgen.biome.api.parameters.Temperature;
 import net.frozenblock.wilderwild.registry.WWBiomes;
-import net.frozenblock.wilderwild.worldgen.biome.*;
+import net.frozenblock.wilderwild.worldgen.biome.FrozenCaves;
+import net.frozenblock.wilderwild.worldgen.biome.MagmaticCaves;
+import net.frozenblock.wilderwild.worldgen.biome.MapleForest;
+import net.frozenblock.wilderwild.worldgen.biome.MesogleaCaves;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.Identifier;

@@ -2,12 +2,14 @@ package net.rebel459.legacies.util;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.Optional;
@@ -23,6 +25,14 @@ public class RegistryHelper {
 
     public static ResourceKey<PlacedFeature> placedFeature(String id) {
         return ResourceKey.create(Registries.PLACED_FEATURE, Identifier.parse(id));
+    }
+
+    public static Item item(String id) {
+        return BuiltInRegistries.ITEM.getValue(Identifier.parse(id));
+    }
+
+    public static Block block(String id) {
+        return BuiltInRegistries.BLOCK.getValue(Identifier.parse(id));
     }
 
     public static boolean matchesItem(String id, Item item, HolderLookup.RegistryLookup<Item> lookup) {
