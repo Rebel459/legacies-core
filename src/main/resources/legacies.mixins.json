@@ -15,8 +15,10 @@
     "defaultRequire": 1
   },
   "client": [
+    "client.DebugScreenEntryListMixin",
     "client.KeyboardHandlerMixin",
     "client.ProfilerPieChartMixin",
-    "client.enderscape.ClientPackSourceMixin"
+    "client.enderscape.ClientPackSourceMixin",
+    "integration.notes.EditNotesScreenMixin"
   ]
 }
