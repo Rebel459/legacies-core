@@ -44,12 +44,13 @@ dependencies {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
+	include implementation("net.rebel459.legacies:bundled-1.4.0-26.1.2")
 	include implementation("net.rebel459.legacies:carbasa-1.5-multi")
-	include implementation("net.rebel459.legacies:elytra-revamped-rerewritten+26.1-1.0.2")
-	include implementation("net.rebel459.legacies:enchanteds_sodium_options-1.2.2+0.8.12-mc26.1.2-fabric")
+	include implementation("net.rebel459.legacies:elytra-revamped-rerewritten+26.2-1.0.3")
+	include implementation("net.rebel459.legacies:enchanteds_sodium_options-1.3.1+0.9.1-mc26.1.2-fabric")
 	include implementation("net.rebel459.legacies:fps-sync-1.0.0+26.1")
 	include implementation("net.rebel459.legacies:harous-leashed-fences-1.1.0+26.1.X")
-	include implementation("net.rebel459.legacies:locator_lodestones-1.5.2+26.1+C")
+	include implementation("net.rebel459.legacies:locator_lodestones-1.5.3+26.1+A")
 	include implementation("net.rebel459.legacies:shifting-wares-4.0.0+26.1.2")
 	include implementation("net.rebel459.legacies:simple-registry-aliases-1.1.0+26.1")
 	include implementation("net.rebel459.legacies:Tooltipz-1.4.1-1.21.9")

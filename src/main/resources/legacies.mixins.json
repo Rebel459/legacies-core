@@ -8,8 +8,7 @@
     "item.FireworkRocketItemMixin",
     "level.GameRulesMixin",
     "server.ServerAdvancementManagerMixin",
-    "worldgen.MultiNoiseBiomeSourceParameterListMixin",
-    "worldgen.NoiseChunkMixin"
+    "worldgen.MultiNoiseBiomeSourceParameterListMixin"
   ],
   "injectors": {
     "defaultRequire": 1
