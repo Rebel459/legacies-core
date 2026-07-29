@@ -3,6 +3,7 @@
   "package": "net.rebel459.legacies.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "integration.bitsandbalance.BaseBlockRecoveryRecipeMixin",
     "integration.tca.TCAItemMixin",
     "integration.tca.TCAItemStackMixin",
     "item.FireworkRocketItemMixin",

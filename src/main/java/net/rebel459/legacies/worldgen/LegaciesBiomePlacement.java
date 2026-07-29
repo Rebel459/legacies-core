@@ -183,7 +183,7 @@ public class LegaciesBiomePlacement {
                             registry.getOrThrow(Biomes.FOREST),
                             registry.getOrThrow(WWBiomes.RAINFOREST),
                             ParameterBuilder.create()
-                                    .climateRange(BiomeInjector.ClimateParameter.TEMPERATURE, 0.2F, 1F)
+                                    .climateRange(BiomeInjector.ClimateParameter.TEMPERATURE, 0.3F, 1F)
                                     .climateRange(BiomeInjector.ClimateParameter.HUMIDITY, 0F, 1F)
                     )
             );
