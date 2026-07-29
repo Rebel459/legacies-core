@@ -20,7 +20,7 @@ public final class EnderscapePack {
     public static Pack createPack() {
         PackLocationInfo location = new PackLocationInfo(
             PACK_ID,
-            Component.literal("Old Mod Assets"),
+            Component.literal("Enderscape Assets"),
             PackSource.BUILT_IN,
             Optional.empty()
         );
