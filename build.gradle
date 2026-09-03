@@ -36,7 +36,6 @@ dependencies {
 	implementation("maven.modrinth:wilder-wild:$wilder_version")
 
 	implementation("maven.modrinth:notes:$notes_version")
-	implementation("maven.modrinth:jei:$jei_version")
 	implementation("maven.modrinth:77x98dqG:QukT8MIn") // Bits and Balance
 
 	api("maven.modrinth:frozenlib:$frozenlib_version")
