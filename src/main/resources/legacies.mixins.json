@@ -18,7 +18,7 @@
     "client.DebugScreenEntryListMixin",
     "client.KeyboardHandlerMixin",
     "client.ProfilerPieChartMixin",
-    "client.enderscape.ClientPackSourceMixin",
+    "integration.jei.RenderHelperMixin",
     "integration.notes.EditNotesScreenMixin"
   ]
 }

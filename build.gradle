@@ -30,13 +30,13 @@ dependencies {
 	implementation("maven.modrinth:lithostitched:$lithostitched_version")
 
 	include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")))
-	include implementation("net.rebel459.legacies:enderscape-fabric-2.1.1+mc26.1.2")
 
 	implementation("maven.modrinth:fancymenu:$fancymenu_version")
 	implementation("maven.modrinth:the-copperier-age:$tca_version")
 	implementation("maven.modrinth:wilder-wild:$wilder_version")
 
 	implementation("maven.modrinth:notes:$notes_version")
+	implementation("maven.modrinth:jei:$jei_version")
 	implementation("maven.modrinth:77x98dqG:QukT8MIn") // Bits and Balance
 
 	api("maven.modrinth:frozenlib:$frozenlib_version")
